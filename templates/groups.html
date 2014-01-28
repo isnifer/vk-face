@@ -1,0 +1,22 @@
+<div class="b-groups" ng-controller="Groups">
+    
+    <ul class="b-groups__list">
+        <li class="b-groups__item g-clf" ng-repeat="group in groups">
+            <img class="b-groups__photo" src="" ng-src="{{ group.photo_medium }}">
+            <div class="b-groups__info">
+                <span class="b-groups__name">
+                    <strong>{{ group.name }}</strong>
+                </span>
+                <blockquote class="b-groups__description" ng-bind-html="group.description">
+                </blockquote>
+                <p class="b-groups__count" ng-if="group.members_count">
+                    Подписчиков: {{ group.members_count }}
+                </p>
+                <p class="b-groups__type" ng-if="group.type">
+                    Тип: {{ pageType(group.type) }}
+                </p>
+            </div>
+        </li>
+    </ul>
+
+</div>

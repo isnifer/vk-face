@@ -1,0 +1,150 @@
+.b-player
+  width 356px
+  border 1px solid #000
+  box-shadow 2px 5px 10px 2px rgba(0,0,0,.7)
+
+  &__header
+    position relative
+    padding 3px 0 0
+    height 48px
+    background url(../img/header-bg.png) repeat-x 0 0
+
+  &__filter
+    display block
+    margin 4px auto 0
+    padding 0 10px
+    width 250px
+    height 15px
+    outline none
+    border 0
+    font-weight bold
+    font-size 12px
+
+  &__track-title
+    color #fff
+    text-align center
+    font-weight bold
+
+  &__list
+    overflow-y scroll
+    height 400px
+    background url(../img/tracks-bg.png) repeat 0 0
+
+  &__item
+    padding 5px 10px
+    border-bottom 1px dashed #fff
+    color #fff
+    cursor pointer
+
+    &:hover
+      color #f1c40f
+
+    &_state_active
+      color #f1c40f
+      font-weight bold
+
+  &__controls
+    padding 15px 0 0
+
+  &__controls-progress
+    display block
+    margin 0 auto 8px
+    width 300px
+
+  &__controls-list
+    margin 0
+    padding 0
+    list-style none
+    text-align center
+
+  &__controls-item
+    text-indent -9999px
+    position relative
+    display inline-block
+    margin 0 5px
+    width 33px
+    height 34px
+    border-radius 50%
+    vertical-align top
+    cursor pointer
+
+    &:hover
+      box-shadow 0 0 10px 2px rgba(255,255,255,.4)
+
+  &__controls-prev
+    top 3px
+    background url(../img/prev.png) no-repeat 0 0
+
+    &:active
+      top 4px
+      left 1px
+
+  &__controls-play
+    width 37px
+    height 38px
+    background url(../img/play.png) no-repeat 0 0
+
+    &:active
+      top 1px
+      left 1px
+
+  &__controls-next
+    top 3px
+    background url(../img/next.png) no-repeat 0 0
+
+    &:active
+      top 4px
+      left 1px
+
+  &__controls-mute
+    top 3px
+    background url(../img/mute.png) no-repeat 0 0
+
+    &_on, &_on:hover
+      box-shadow 0 0 10px 2px rgba(243,58,33,.4)
+
+  &__controls
+    height 84px
+    background url(../img/footer-bg.png) repeat-x 0 0
+
+  &__controls-progress
+    display block
+    width 90%
+    height 11px
+    border 0
+    border-right 1px solid #1e1f21
+    border-left 1px solid #1e1f21
+    vertical-align top
+    cursor pointer
+
+    &::-webkit-progress-inner-elemen
+      background url(../img/possible-progress.png) repeat-x 0 0
+
+    &::-webkit-progress-bar
+      padding 1px 0
+      background url(../img/possible-progress.png) repeat-x 0 0
+
+    &::-webkit-progress-value
+      position relative
+      height 9px
+      background url(../img/progress.png) repeat-x 0 0
+
+      &:after
+        position absolute
+        top -4px
+        right -9px
+        display block
+        width 19px
+        height 18px
+        background url(../img/progress-cursor.png) no-repeat 0 0
+        content ""
+
+  &__minimize
+    position absolute
+    top 5px
+    left 5px
+    display inline-block
+    width 15px
+    height 5px
+    background #ffff00
+    cursor pointer

@@ -1,0 +1,84 @@
+@import "../fonts/PTSans/stylesheet.css";
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.g-clf:after,.g-clf:before{display:table;clear:both;content:""}
+img{max-width:100%}
+::-webkit-scrollbar{width:12px}
+::-webkit-scrollbar-track{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3)}
+::-webkit-scrollbar-thumb{border-radius:10px;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5)}
+html,body{height:100%;font:normal 16px "PT Sans",Verdana,Tahoma}
+.b-page{position:relative;min-height:100%;background:#27ae60}
+.b-header__title{margin:0;text-align:center;font:bold 2em "PT Sans"}
+.b-sidebar{position:fixed;top:0;bottom:0;left:0;width:400px;background:#2c3e50;}
+.b-sidebar__list{margin:10px 0 0 20px;padding:0;list-style:none}
+.b-sidebar__item{padding:2px 0}
+.b-sidebar__link{color:#fff;text-decoration:none;font-size:.875em;transition:color .5s ease;}
+.b-sidebar__link:hover{color:#2980b9}
+.b-sidebar__notifications{display:inline-block;padding:20px;color:#ff0;font-weight:bold;cursor:pointer}
+.b-main{margin-left:400px;padding:0 30px}
+.b-friends__photo{float:left;margin-right:20px}
+.b-friends__info{overflow:hidden}
+.b-friends__list{margin:20px 0 0}
+.b-friends__item{margin:0 0 20px}
+.b-friends__photo{position:relative;top:5px}
+.b-friends__link{color:#fff;text-decoration:none}
+.b-friends__name{display:block}
+.b-friends__status,.b-friends__phone{position:relative;margin:0 0 5px;color:#fff}
+.b-friends__status{font-size:.8125em}
+.b-groups__list{margin:0;padding:0;list-style:none}
+.b-groups__item{margin:0 0 20px}
+.b-groups__photo{position:relative;top:6px;float:left;margin-right:20px;border-radius:25%}
+.b-groups__info{overflow:hidden}
+.b-groups__name{font-size:1.5em}
+.b-groups__count,.b-groups__type{margin:0 0 5px;font-weight:bold;font-size:.9375em}
+.b-groups__description{display:block;margin:10px 0;padding-left:10px;border-left:3px solid #c0392b;font-style:italic;font-size:.8125em}
+.b-profile__sidebar{float:left;width:300px;}
+.b-profile__sidebar-header{margin:0 0 20px;width:260px;text-align:center;font-weight:bold;font-size:1.375em}
+.b-profile__sidebar-list{margin:0;padding:0;list-style:none}
+.b-profile__sidebar-item{display:inline-block;overflow:hidden;margin:0 10px 10px 0;width:80px;vertical-align:top;text-align:center;font-size:.8125em}
+.b-profile__sidebar-link{display:block;margin:0 auto;width:50px}
+.b-profile__sidebar-photo{display:block;margin:0 auto}
+.b-profile__sidebar-name{display:block;text-align:center;font-size:.8125em}
+.b-wall{overflow:hidden;}
+.b-wall__list{margin:0;padding:0;list-style:none}
+.b-wall__item{display:block;padding:10px 0}
+.b-music_sidebar{padding:20px}
+.b-music__list{margin:0;padding:0;list-style:none}
+.b-music__item{display:block;padding:10px 0}
+.b-music audio{display:block;width:700px}
+.b-album{display:block;}
+.b-album__list{margin:0;padding:0;list-style:none}
+.b-album__item{display:inline-block;padding:10px;width:150px;vertical-align:top}
+.b-photos{display:block;}
+.b-photos__list{margin:0;padding:0;list-style:none}
+.b-photos__item{display:inline-block;padding:10px 20px 10px 0;vertical-align:top}
+.b-photos__link{text-decoration:none;display:block}
+.b-photos__photo:hover{box-shadow:0 0 2px 2px rgba(0,0,0,0.6)}
+.b-photos__link-back{text-decoration:none;border-bottom:1px dotted #fff;color:#fff;font-style:italic;font-size:1.25em;display:inline-block}
+.b-player{width:356px;border:1px solid #000;box-shadow:2px 5px 10px 2px rgba(0,0,0,0.7);}
+.b-player__header{position:relative;padding:3px 0 0;height:48px;background:url("../img/header-bg.png") repeat-x 0 0}
+.b-player__filter{display:block;margin:4px auto 0;padding:0 10px;width:250px;height:15px;outline:none;border:0;font-weight:bold;font-size:12px}
+.b-player__track-title{color:#fff;text-align:center;font-weight:bold}
+.b-player__list{overflow-y:scroll;height:400px;background:url("../img/tracks-bg.png") repeat 0 0}
+.b-player__item{padding:5px 10px;border-bottom:1px dashed #fff;color:#fff;cursor:pointer;}
+.b-player__item:hover{color:#f1c40f}
+.b-player__item_state_active{color:#f1c40f;font-weight:bold}
+.b-player__controls{padding:15px 0 0}
+.b-player__controls-progress{display:block;margin:0 auto 8px;width:300px}
+.b-player__controls-list{margin:0;padding:0;list-style:none;text-align:center}
+.b-player__controls-item{text-indent:-9999px;position:relative;display:inline-block;margin:0 5px;width:33px;height:34px;border-radius:50%;vertical-align:top;cursor:pointer;}
+.b-player__controls-item:hover{box-shadow:0 0 10px 2px rgba(255,255,255,0.4)}
+.b-player__controls-prev{top:3px;background:url("../img/prev.png") no-repeat 0 0;}
+.b-player__controls-prev:active{top:4px;left:1px}
+.b-player__controls-play{width:37px;height:38px;background:url("../img/play.png") no-repeat 0 0;}
+.b-player__controls-play:active{top:1px;left:1px}
+.b-player__controls-next{top:3px;background:url("../img/next.png") no-repeat 0 0;}
+.b-player__controls-next:active{top:4px;left:1px}
+.b-player__controls-mute{top:3px;background:url("../img/mute.png") no-repeat 0 0;}
+.b-player__controls-mute_on,.b-player__controls-mute_on:hover{box-shadow:0 0 10px 2px rgba(243,58,33,0.4)}
+.b-player__controls{height:84px;background:url("../img/footer-bg.png") repeat-x 0 0}
+.b-player__controls-progress{display:block;width:90%;height:11px;border:0;border-right:1px solid #1e1f21;border-left:1px solid #1e1f21;vertical-align:top;cursor:pointer;}
+.b-player__controls-progress::-webkit-progress-inner-elemen{background:url("../img/possible-progress.png") repeat-x 0 0}
+.b-player__controls-progress::-webkit-progress-bar{padding:1px 0;background:url("../img/possible-progress.png") repeat-x 0 0}
+.b-player__controls-progress::-webkit-progress-value{position:relative;height:9px;background:url("../img/progress.png") repeat-x 0 0;}
+.b-player__controls-progress::-webkit-progress-value:after{position:absolute;top:-4px;right:-9px;display:block;width:19px;height:18px;background:url("../img/progress-cursor.png") no-repeat 0 0;content:""}
+.b-player__minimize{position:absolute;top:5px;left:5px;display:inline-block;width:15px;height:5px;background:#ff0;cursor:pointer}

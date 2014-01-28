@@ -1,0 +1,12 @@
+<div class="b-video" ng-controller="Video">
+    
+	<div class="b-video__list">
+		<div class="b-video__item" ng-repeat="video in videos">
+			
+			<p class="b-video__title">{{ video.title }}</p>
+			<iframe src="" ng-src="{{ video.player }}" width="607" height="360" frameborder="0"></iframe>
+
+		</div>
+	</div>
+
+</div>

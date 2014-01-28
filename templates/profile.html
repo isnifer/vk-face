@@ -1,0 +1,67 @@
+<div class="b-profile" ng-controller="Profile">
+
+    <div class="b-profile__sidebar">
+
+        <div class="b-profile__sidebar-block g-clf">
+
+            <header class="b-profile__sidebar-header">{{ specialNames.groups.ru }}</header>
+
+            <ul class="b-profile__sidebar-list">
+                <li class="b-profile__sidebar-item" ng-repeat="group in profileGroups">
+                    <a class="b-profile__sidebar-link" href="#/group/{{ group.gid }}">
+                        <img class="b-profile__sidebar-photo" src="" ng-src="{{ group.photo }}" alt="{{ group.name }}"/>
+                    </a>
+                    <p class="b-profile__sidebar-title">{{ group.name }}</p>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="b-profile__sidebar-block g-clf">
+
+            <header class="b-profile__sidebar-header">{{ specialNames.friends.ru }}</header>
+
+            <ul class="b-profile__sidebar-list">
+                <li class="b-profile__sidebar-item" ng-repeat="friend in profilePeople">
+                    <a class="b-profile__sidebar-link" href="#/profile/{{ friend.uid }}">
+                        <img class="b-profile__sidebar-photo" src="" ng-src="{{ friend.photo }}" />
+                    </a>
+                    <span class="b-profile__sidebar-name">
+                        {{ friend.first_name }} {{ friend.last_name }}
+                    </span>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="b-wall">
+
+        <p class="b-wall__all">Всего записей: {{ profilePostCounter }}</p>
+
+        <ul class="b-wall__list">
+
+            <li class="b-wall__item" ng-repeat="post in profileWall" ng-model="postArray">
+
+                <p class="b-wall__text" ng-bind-html="post.text"></p>
+
+                <!--<div class="b-wall__attach">
+
+                    <ul class="b-wall__attach-list">
+                        <li class="b-wall__item" ng-repeat="{{ attach in attachArray }}">
+                            {{ insertAttach(attach.type, attach) }}
+                        </li>
+                    </ul>
+
+                </div>-->
+
+                <span class="b-wall__likes">Likes: {{ post.likes.count }}</span>
+                <span class="b-wall__likes">Reposts: {{ post.reposts.count }}</span>
+
+            </li>
+
+        </ul>
+    </div>
+
+</div>

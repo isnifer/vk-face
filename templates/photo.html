@@ -1,0 +1,18 @@
+<div class="b-album" ng-controller="Photo">
+    
+	<div class="b-album">
+		<ul class="b-album__list">
+			<li class="b-album__item" ng-repeat="album in albums">
+				<a href="#/album/{{ album.aid }}" class="b-album__link">
+					<img src="" ng-src="{{ album.thumb_src }}" alt="{{ album.title }}" class="b-album__cover">
+					<p class="b-album__title">{{ album.title }}</p>
+				</a>
+				<p class="b-album__description">{{ album.description }}</p>
+				<p class="b-album__counter">
+					{{ specialNames.photosInAlbum.ru }}: {{ album.size }}
+				</p>
+			</li>
+		</ul>
+	</div>
+
+</div>

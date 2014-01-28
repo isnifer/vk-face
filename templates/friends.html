@@ -1,0 +1,26 @@
+<div class="b-friends" ng-controller="Friends">
+
+    <label>
+        <input class="b-friends__search" type="text" ng-model="friendName" />
+    </label>
+
+    <div class="b-friends__list">
+        <div class="b-friends__item g-clf" ng-repeat="friend in friends | filter: friendName">
+
+            <img class="b-friends__photo" src="" ng-src="{{ friend.photo_medium }}" alt="{{ friend.first_name }} {{ friend.last_name }}"/>
+
+            <div class="b-friends__info">
+
+                <a class="b-friends__name b-friends__link" href="#/profile/{{ friend.user_id }}">
+                    {{ friend.first_name }} {{ friend.last_name }}
+                </a>
+
+                <p class="b-friends__status" ng-if="friend.online = 1">Online</p>
+                <p class="b-friends__phone fa-phone-square" ng-if="friend.mobile_phone">{{ specialNames.phone.ru }}: {{ friend.mobile_phone }}</p>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

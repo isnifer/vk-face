@@ -1,0 +1,15 @@
+<div class="b-photos" ng-controller="Album">
+	
+	<ul class="b-photos__list">
+		<li class="b-photos__item" ng-repeat="photo in album">
+			<a href="{{ photo.src_big }}" rel="group" class="b-photos__link b-fancybox">
+				<img src="" ng-src="{{ photo.src }}" alt="{{ photo.text }}" class="b-photos__photo">
+			</a>
+		</li>
+	</ul>
+
+	<a href="#/photo" class="b-photos__link-back">
+		Вернуться к альбомам
+	</a>
+
+</div>	

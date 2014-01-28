@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru" ng-app="vk">
+<head>
+    <meta charset="UTF-8">
+    <title>North-West VK App</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/plugins/fancybox/jquery.fancybox.css"/>
+    <!-- <script src="js/server.js"></script> -->
+    <!--<script src="js/menu.js"></script>-->
+    <script src="js/libs/angular.js"></script>
+    <script src="js/plugins/angular-route.js"></script>
+    <script src="js/plugins/angular-resource.js"></script>
+    <script src="js/plugins/angular-sanitize.js"></script>
+    <script type="text/javascript">
+        var token, // Your Token
+            id;    // Your ID
+    </script>
+</head>
+<body>
+
+    <!-- Страница -->
+    <div class="b-page" ng-controller="Default">
+
+        <!-- Обвязка -->
+        <div class="b-page__wrapper">
+
+            <div class="b-sidebar">
+
+                <ul class="b-sidebar__list">
+                    <li class="b-sidebar__item" ng-repeat="name in menuName">
+                        <a class="b-sidebar__link" href="{{ name.url }}">{{ name.ru }}</a>
+                    </li>
+                </ul>
+
+                <span class="b-sidebar__notifications notify">
+                    Включить нотификации
+                </span>
+
+                <div class="b-music b-music_sidebar" ng-controller="Music">
+
+                    <div class="b-player">
+
+                        <div class="b-player__header">
+                            <span class="b-player__minimize" title="Свернуть трек-лист"></span>
+                            <div class="b-player__track-title" id="trackTitle">
+                                {{ tracks[0].title }}
+                            </div>
+                            <input placeholder="Найти нужный трек..." type="text" class="b-player__filter" ng-model="filterTracks" />
+                        </div>
+                        <div class="b-player__list">
+                            <div class="b-player__item" data-artist="{{ audio.artist }}" data-title="{{ audio.title }}" data-url="{{ audio.url }}" ng-repeat="audio in tracks | filter: filterTracks">
+                                {{ audio.artist }} - {{ audio.title }}
+                            </div>
+                        </div>
+                        <div class="b-player__controls">
+                            <progress min="0" max="100" value="0" class="b-player__controls-progress"></progress>
+                            <ul class="b-player__controls-list">
+                                <li class="b-player__controls-item b-player__controls-prev">
+                                    prev
+                                </li>
+                                <li class="b-player__controls-item b-player__controls-play">
+                                    play
+                                </li>
+                                <li class="b-player__controls-item b-player__controls-next">
+                                    next
+                                </li>
+                                <li class="b-player__controls-item b-player__controls-mute">
+                                    mute
+                                </li>
+                            </ul>
+                        </div>
+                        <audio src="" ng-src="{{ tracks[0].url }}" class="b-player__audio"></audio>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="b-main">
+                <div class="b-header">
+                    <h1 class="b-header__title">North-West VK App</h1>
+                </div>
+                <div class="b-main__view" ng-controller="Profile" ng-view>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Libs -->
+    <script src="js/libs/jquery-2.0.3.min.js"></script>
+    <script src="js/plugins/jquery/fancybox/jquery.fancybox.pack.js"></script>
+    
+    <script src="js/vk.js"></script>
+
+</body>
+</html>
